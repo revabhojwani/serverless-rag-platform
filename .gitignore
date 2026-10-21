@@ -1,0 +1,8 @@
+build/
+lambda.zip
+tenant-keys.txt
+student.txt
+faculty.txt
+__pycache__/
+*.pyc
+*.pdf
