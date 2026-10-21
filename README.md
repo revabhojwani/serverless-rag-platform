@@ -9,7 +9,7 @@ Storage layout
 - S3: `<tenant_id>/docs/<file>.pdf`, `<tenant_id>/index/vectors.npy`, `<tenant_id>/index/chunks.json`
 - DynamoDB, one table, partition key `tenant_id`, sort key `sk`: item `META` holds the tenant name and key hash, items `CHAT#<timestamp>` hold query history
 
-## Deploy (AWS console, one region, e.g. ap-south-1)
+## Deploy (AWS console, one region, e.g. ap-southest-2)
 
 1. Build the package: `python build.py` (or `bash build.sh` on Mac/Linux). It prints the unzipped size. It must be under 250 MB.
 2. S3: create a bucket, e.g. `rag-platform-<yourname>`. Upload `lambda.zip` into it (zips over 50 MB cannot be uploaded directly in the Lambda console).
